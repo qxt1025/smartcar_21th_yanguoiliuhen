@@ -1,0 +1,19 @@
+# Keil build output (any level)
+**/Objects/
+**/Listings/
+**/DebugConfig/
+
+*.o
+*.d
+*.crf
+*.lst
+*.map
+*.axf
+*.hex
+*.bin
+
+# Keil user/temp
+*.bak
+*.dep
+*.uvguix.*
+*.uvoptx
