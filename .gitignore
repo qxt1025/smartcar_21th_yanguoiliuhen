@@ -1,8 +1,14 @@
+# clangd / vscode / idea caches
+.cache/
+.vscode/
+.idea/
+
 # Keil build output (any level)
 **/Objects/
 **/Listings/
 **/DebugConfig/
 
+# common build artifacts
 *.o
 *.d
 *.crf
@@ -12,8 +18,7 @@
 *.hex
 *.bin
 
-# Keil user/temp
+# temp/backup
 *.bak
 *.dep
 *.uvguix.*
-*.uvoptx
