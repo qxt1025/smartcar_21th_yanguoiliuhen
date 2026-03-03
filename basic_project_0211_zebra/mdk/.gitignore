@@ -1,0 +1,18 @@
+# Keil build output
+Objects/
+Listings/
+DebugConfig/
+
+*.o
+*.d
+*.crf
+*.lst
+*.map
+*.axf
+*.hex
+*.bin
+
+# Keil temp/backup
+*.bak
+*.dep
+*.uvguix.*
