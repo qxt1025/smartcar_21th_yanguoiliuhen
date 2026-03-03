@@ -2,6 +2,7 @@
 .cache/
 .vscode/
 .idea/
+compile_commands.json
 
 # Keil build output (any level)
 **/Objects/
