@@ -1,0 +1,40 @@
+#include "zf_common_headfile.h"
+
+#define SEARCH_IMAGE_W  MT9V03X_W   // ???????
+#define SEARCH_IMAGE_H  MT9V03X_H   // ??????
+#define BLACKPOINT      50          // ????
+#define WHITEMAXMUL     13          // ???????????��???????? 10??????
+#define WHITEMINMUL     7           // ?????��?????��???????? 10??????
+
+#define REFRENCEROW     5           // ?��??????????
+#define SEARCHRANGE     10          // ?????
+#define STOPROW         0           // ????????
+#define CONTRASTOFFSET  3           // ?????????
+#define ZEBRA_JUMP_DIFF_MIN         10
+#define ZEBRA_JUMP_DIFF_MAX         30
+#define ZEBRA_JUMP_COUNT_THRESHOLD  8
+
+extern uint8 reference_point;              // ????��???
+extern uint8 reference_col;                // ????��???
+extern uint8 white_max_point;              // ??????????
+extern uint8 white_min_point;              // ????????��?
+extern uint8 left_edge_line[SEARCH_IMAGE_H];     // ????
+extern uint8 reference_contrast_ratio;     // ?��?????
+extern uint8 far reference_col_line[SEARCH_IMAGE_H]; // ?��??��???
+extern uint8 remote_distance[SEARCH_IMAGE_W];    // ?????????
+extern uint8 right_edge_line[SEARCH_IMAGE_H];    // ????
+extern uint8 far middle_line[SEARCH_IMAGE_H];     // 中间�?
+extern uint8 zebra_detected;
+extern uint8 zebra_jump_count;
+extern uint8 far if_count;
+extern uint8 (*g_frame_img)[MT9V03X_W];
+
+void get_reference_point(const uint8 *image);
+void search_reference_col(const uint8 *image);
+void search_line(const uint8 *image);
+
+void copy_mt9v03x_to_temp(void);
+
+void count_line_lost(void);
+
+void post_process_lines(void);

@@ -1,0 +1,47 @@
+{
+  "configurations": [
+    {
+      "name": "Win32",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "${workspaceFolder}/basic_project_0211_zebra",
+        "${workspaceFolder}/basic_project_0211_zebra/Base",
+        "${workspaceFolder}/basic_project_0211_zebra/code",
+        "${workspaceFolder}/basic_project_0211_zebra/user",
+        "${workspaceFolder}/basic_project_0211_zebra/camera_process",
+        "${workspaceFolder}/basic_project_0211_zebra/control",
+        "${workspaceFolder}/basic_project_0211_zebra/GUI",
+        "${workspaceFolder}/basic_project_0211_zebra/adjust",
+        "${workspaceFolder}/libraries/zf_common",
+        "${workspaceFolder}/libraries/zf_driver",
+        "${workspaceFolder}/libraries/zf_device",
+        "${workspaceFolder}/libraries/zf_components",
+        "${workspaceFolder}/libraries/zf_components/stc32g_usb_lib",
+        "${workspaceFolder}/libraries/zf_components/seekfree_assistant"
+      ],
+      "defines": [
+        "__STC32G144K_H__",
+        "xdata=",
+        "idata=",
+        "pdata=",
+        "code=",
+        "far=",
+        "reentrant=",
+        "using=",
+        "interrupt=",
+        "bit=unsigned char",
+        "sfr=volatile unsigned char",
+        "sfr16=volatile unsigned short",
+        "sfr32=volatile unsigned int",
+        "sbit=volatile unsigned char",
+        "_nop_()=((void)0)"
+      ],
+      "compileCommands": "${workspaceFolder}/compile_commands.json",
+      "compilerPath": "",
+      "cStandard": "c11",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "gcc-x64"
+    }
+  ],
+  "version": 4
+}

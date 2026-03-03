@@ -1,0 +1,333 @@
+﻿[
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "basic_project_0211_zebra\\Base\\beep.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c basic_project_0211_zebra\\Base\\beep.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "basic_project_0211_zebra\\Base\\err_calculation.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c basic_project_0211_zebra\\Base\\err_calculation.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "basic_project_0211_zebra\\Base\\filter.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c basic_project_0211_zebra\\Base\\filter.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "basic_project_0211_zebra\\Base\\integral.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c basic_project_0211_zebra\\Base\\integral.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "basic_project_0211_zebra\\Base\\mycar.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c basic_project_0211_zebra\\Base\\mycar.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "basic_project_0211_zebra\\Base\\pid.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c basic_project_0211_zebra\\Base\\pid.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "basic_project_0211_zebra\\camera_process\\act_persp.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c basic_project_0211_zebra\\camera_process\\act_persp.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "basic_project_0211_zebra\\camera_process\\Binarization.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c basic_project_0211_zebra\\camera_process\\Binarization.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "basic_project_0211_zebra\\camera_process\\black_obstacle.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c basic_project_0211_zebra\\camera_process\\black_obstacle.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "basic_project_0211_zebra\\camera_process\\circle.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c basic_project_0211_zebra\\camera_process\\circle.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "basic_project_0211_zebra\\camera_process\\Element_recognition.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c basic_project_0211_zebra\\camera_process\\Element_recognition.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "basic_project_0211_zebra\\camera_process\\island.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c basic_project_0211_zebra\\camera_process\\island.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "basic_project_0211_zebra\\camera_process\\obstacle.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c basic_project_0211_zebra\\camera_process\\obstacle.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "basic_project_0211_zebra\\camera_process\\patch_line.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c basic_project_0211_zebra\\camera_process\\patch_line.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "basic_project_0211_zebra\\camera_process\\process.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c basic_project_0211_zebra\\camera_process\\process.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "basic_project_0211_zebra\\camera_process\\scan_line.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c basic_project_0211_zebra\\camera_process\\scan_line.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "basic_project_0211_zebra\\camera_process\\slope.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c basic_project_0211_zebra\\camera_process\\slope.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "basic_project_0211_zebra\\camera_process\\zebra.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c basic_project_0211_zebra\\camera_process\\zebra.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "basic_project_0211_zebra\\code\\search_line.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c basic_project_0211_zebra\\code\\search_line.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "basic_project_0211_zebra\\code\\user_function.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c basic_project_0211_zebra\\code\\user_function.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "basic_project_0211_zebra\\user\\isr.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c basic_project_0211_zebra\\user\\isr.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "basic_project_0211_zebra\\user\\main.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c basic_project_0211_zebra\\user\\main.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_common\\zf_common_clock.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_common\\zf_common_clock.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_common\\zf_common_debug.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_common\\zf_common_debug.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_common\\zf_common_fifo.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_common\\zf_common_fifo.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_common\\zf_common_font.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_common\\zf_common_font.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_common\\zf_common_function.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_common\\zf_common_function.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_common\\zf_common_interrupt.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_common\\zf_common_interrupt.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_common\\zf_common_typedef.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_common\\zf_common_typedef.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_components\\seekfree_assistant\\seekfree_assistant.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_components\\seekfree_assistant\\seekfree_assistant.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_components\\seekfree_assistant\\seekfree_assistant_inface.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_components\\seekfree_assistant\\seekfree_assistant_inface.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_components\\seekfree_assistant\\seekfree_assistant_interface.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_components\\seekfree_assistant\\seekfree_assistant_interface.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_components\\stc32g_usb_lib\\usb.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_components\\stc32g_usb_lib\\usb.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_components\\stc32g_usb_lib\\usb_desc.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_components\\stc32g_usb_lib\\usb_desc.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_components\\stc32g_usb_lib\\usb_req_class.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_components\\stc32g_usb_lib\\usb_req_class.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_components\\stc32g_usb_lib\\usb_req_std.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_components\\stc32g_usb_lib\\usb_req_std.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_components\\stc32g_usb_lib\\usb_req_vendor.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_components\\stc32g_usb_lib\\usb_req_vendor.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_components\\stc32g_usb_lib\\util.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_components\\stc32g_usb_lib\\util.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_device\\zf_device_ble6a20.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_device\\zf_device_ble6a20.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_device\\zf_device_dl1a.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_device\\zf_device_dl1a.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_device\\zf_device_dl1b.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_device\\zf_device_dl1b.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_device\\zf_device_imu660ra.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_device\\zf_device_imu660ra.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_device\\zf_device_imu660rb.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_device\\zf_device_imu660rb.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_device\\zf_device_imu963ra.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_device\\zf_device_imu963ra.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_device\\zf_device_ips114.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_device\\zf_device_ips114.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_device\\zf_device_ips200.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_device\\zf_device_ips200.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_device\\zf_device_ips200pro.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_device\\zf_device_ips200pro.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_device\\zf_device_mt9v03x.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_device\\zf_device_mt9v03x.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_device\\zf_device_tft180.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_device\\zf_device_tft180.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_device\\zf_device_type.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_device\\zf_device_type.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_device\\zf_device_wifi_spi.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_device\\zf_device_wifi_spi.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_device\\zf_device_wireless_uart.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_device\\zf_device_wireless_uart.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_driver\\zf_driver_adc.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_driver\\zf_driver_adc.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_driver\\zf_driver_delay.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_driver\\zf_driver_delay.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_driver\\zf_driver_eeprom.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_driver\\zf_driver_eeprom.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_driver\\zf_driver_encoder.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_driver\\zf_driver_encoder.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_driver\\zf_driver_exti.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_driver\\zf_driver_exti.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_driver\\zf_driver_gpio.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_driver\\zf_driver_gpio.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_driver\\zf_driver_pit.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_driver\\zf_driver_pit.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_driver\\zf_driver_pwm.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_driver\\zf_driver_pwm.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_driver\\zf_driver_soft_iic.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_driver\\zf_driver_soft_iic.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_driver\\zf_driver_spi.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_driver\\zf_driver_spi.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_driver\\zf_driver_spi_dma.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_driver\\zf_driver_spi_dma.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_driver\\zf_driver_timer.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_driver\\zf_driver_timer.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_driver\\zf_driver_uart.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_driver\\zf_driver_uart.c"
+    },
+    {
+        "directory":  "D:\\KEIL51\\STC_workspace\\basic",
+        "file":  "libraries\\zf_driver\\zf_driver_usb_cdc.c",
+        "command":  "clang -xc -std=c11 -D__STC32G144K_H__ -Dxdata= -Didata= -Dpdata= -Dcode= -Dfar= -Dreentrant= -Dusing= -Dinterrupt= -Dbit=unsigned char -Dsfr=volatile unsigned char -Dsfr16=volatile unsigned short -Dsfr32=volatile unsigned int -Dsbit=volatile unsigned char -D_nop_()=((void)0) -I. -Ibasic_project_0211_zebra -Ibasic_project_0211_zebra/Base -Ibasic_project_0211_zebra/code -Ibasic_project_0211_zebra/user -Ibasic_project_0211_zebra/camera_process -Ibasic_project_0211_zebra/control -Ibasic_project_0211_zebra/GUI -Ibasic_project_0211_zebra/adjust -Ilibraries/zf_common -Ilibraries/zf_driver -Ilibraries/zf_device -Ilibraries/zf_components -Ilibraries/zf_components/stc32g_usb_lib -Ilibraries/zf_components/seekfree_assistant -c libraries\\zf_driver\\zf_driver_usb_cdc.c"
+    }
+]
+
