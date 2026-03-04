@@ -5,9 +5,13 @@
  *      Author: Admin
  */
 #include "application.h"
+#include "base.h"
 #include "GUI.h"
 #include "display.h"
 #include "port.h"
+
+static uint8 ui_switch_last = 2;
+static uint8 img_switch_last = 2;
 
 /*
  * Purpose: GUI模块初始化入口
@@ -34,6 +38,29 @@ void GUI_scan()
     key_scan(); //按键扫描函数
     ec11_scan();
     TSUI_ButtonEvent();//由扫描函数获得的数据计算当前的状态
+}
+
+/*
+ * Purpose: 同步PB0/PB1开关状态到UI控制结构
+ * Param  : 无
+ * Return : 无
+ * Note   : 状态变化时清屏，首次同步仅记录状态
+ */
+void GUI_UpdateSwitchState()
+{
+    uint8 ui_enable = (gpio_get_level(GUI_SWITCH_PIN) == GUI_SWITCH_ENABLE_LEVEL) ? 1U : 0U;
+    uint8 img_enable = (gpio_get_level(IMG_SWITCH_PIN) == IMG_SWITCH_ENABLE_LEVEL) ? 1U : 0U;
+
+    tsui.ui_enable = ui_enable;
+    tsui.img_enable = img_enable;
+
+    if(2U != ui_switch_last && (ui_enable != ui_switch_last || img_enable != img_switch_last))
+    {
+        ips200_clear(RGB565_WHITE);
+    }
+
+    ui_switch_last = ui_enable;
+    img_switch_last = img_enable;
 }
 
 /*
