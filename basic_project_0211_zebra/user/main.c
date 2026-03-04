@@ -36,7 +36,7 @@
 #include "search_line.h"
 #include "application.h"
 #include "GUI.h"
-
+#include "base.h"
 
 // *************************** 例程硬件连接说明 ***************************
 //
@@ -93,18 +93,6 @@
 // 如果发现现象与说明严重不符 请参照本文件最下方 例程常见问题说明 进行排查
 
 // **************************** 代码区域 ****************************
-#define LED1                    (IO_P52 )
-#define GUI_SWITCH_PIN          (IO_PB0)
-#define GUI_SWITCH_ENABLE_LEVEL (1U)
-#define IMG_SWITCH_PIN          (IO_PB1)
-#define IMG_SWITCH_ENABLE_LEVEL (1U)
-#define PIT_CH                  (TIM0_PIT)
-#define PIT_PRIORITY            (TIMER0_IRQn)
-#define TIM1_CTRL_CH            (TIM1_PIT)
-#define TIM1_CTRL_PRIORITY      (TIMER1_IRQn)
-#define TIM1_CTRL_PERIOD_MS     (1)
-
-
 static volatile uint32 g_ms_ticks = 0;                     // 1ms系统节拍，由PIT中断累加
 static volatile uint8 g_tim1_1ms_flag = 0;                 // TIM1每1ms置位一次，在主循环中消费
 static uint8 temp_img_raw[MT9V03X_IMAGE_SIZE + 1];         // 后备缓冲原始内存，+1字节用于手动地址对齐
@@ -123,8 +111,6 @@ static uint32 now = 0;                                   // 当前时间戳(ms)
 static uint32 elapsed = 0;                               // FPS统计窗口时长(ms)
 static uint32 t0 = 0;                                    // 阶段起始时间(ms)
 static uint32 t1 = 0;                                    // 阶段结束时间(ms)
-static uint8 ui_switch_last = 2;                         // 上一次PB0对应的UI使能状态（2表示未初始化）
-static uint8 img_switch_last = 2;                        // 上一次PB1对应的图像显示状态（2表示未初始化）
 
 /*
  * 功能: 交换摄像头双缓冲，并将DMA重定向到新的写缓冲
@@ -194,60 +180,18 @@ void main(void)
 
     clock_init(SYSTEM_CLOCK_96M);                          // 时钟配置及系统初始化<务必保留>
     debug_init();                                          // 调试串口初始化
-    gpio_init(LED1, GPO, 0, GPO_PUSH_PULL);                // LED状态指示IO初始化
-    gpio_init(GUI_SWITCH_PIN, GPI, GPIO_HIGH, GPI_PULL_UP);// PB0作为UI总开关输入（高电平开启）
-    gpio_init(IMG_SWITCH_PIN, GPI, GPIO_HIGH, GPI_PULL_UP);// PB1作为图像显示开关输入（高电平开启）
+    hardwareinit();                                         // 总初始化
+    pit_ms_init(PIT_CH, 1, pit_handler);                    // 配置1ms PIT时基中断
+    pit_ms_init(TIM1_CTRL_CH, TIM1_CTRL_PERIOD_MS, tim1_ctrl_handler); // 初始化TIM1周期中断
+    interrupt_set_priority(PIT_PRIORITY, 0);                // 设置PIT中断优先级
+    interrupt_set_priority(TIM1_CTRL_PRIORITY, 1);          // 设置TIM1中断优先级（低于系统时基）
 
-    // 此处编写用户代码 例如外设初始化代码等
-    pit_ms_init(PIT_CH, 1, pit_handler);                   // 配置1ms PIT时基中断
-    pit_ms_init(TIM1_CTRL_CH, TIM1_CTRL_PERIOD_MS, tim1_ctrl_handler); // 初始化TIM1周期中断，1ms置位任务标志
-    interrupt_set_priority(PIT_PRIORITY, 0);               // 设置PIT中断优先级
-    interrupt_set_priority(TIM1_CTRL_PRIORITY, 1);         // 设置TIM1中断优先级（低于系统时基）
-	
-	//ips200_set_dir(IPS200_CROSSWISE);
-    ips200_init();                                         // 初始化IPS显示屏
-	hardwareinit();
-	act_perst_init();                                      // 执行板级外设预设初始化
-    ips200_show_string(0, 0, "mt9v03x init.");             // 显示摄像头初始化状态
-    
+    init_aligned_back_buffer();                             // 先计算后备缓冲对齐地址
+    g_dma_img = mt9v03x_image;                              // 首次DMA写入缓冲
+    g_back_img = temp_img;                                  // 后备缓冲绑定到temp_img
+    g_frame_img = mt9v03x_image;                            // 初始化算法读取缓冲
 
-    while(1)
-    {
-        system_delay_ms(100);                              // 初始化重试间隔
-        if(mt9v03x_init())
-        {
-            ips200_show_string(0, 16, "mt9v03x reinit.");  // 摄像头初始化失败，显示重试信息
-            gpio_toggle_level(LED1);                       // LED闪烁指示异常状态
-        }
-        else
-        {
-            break;                                         // 摄像头初始化成功，退出重试循环
-        }
-    }
-
-    ips200_show_string(0, 16, "init success.");            // 初始化成功提示
-    init_aligned_back_buffer();                            // 先计算后备缓冲对齐地址
-    g_dma_img = mt9v03x_image;                             // 首次DMA写入缓冲
-    g_back_img = temp_img;                                 // 后备缓冲绑定到temp_img
-    g_frame_img = mt9v03x_image;                           // 初始化算法读取缓冲
-
-    // 此处编写用户代码 例如外设初始化代码等
-    /*ips200_show_string(0, 140, "FPS:");
-    ips200_show_string(0, 160, "original_err:");
-    ips200_show_string(0, 180, "zebra_flag:");
-    ips200_show_string(0, 200, "jump_cnt:");
-    ips200_show_string(0, 220, "cross:");
-    ips200_show_string(0, 240, "obs_flag:");
-    //ips200_show_string(0, 260, "right_black:");
-    ips200_show_string(0, 280, "InLoop:");
-    ips200_show_string(100, 140, "InLoopAngleL:");
-    ips200_show_string(100, 160, "InLoopAngleR:");
-*/
-	GUI_Init();
-    tsui.ui_enable = (gpio_get_level(GUI_SWITCH_PIN) == GUI_SWITCH_ENABLE_LEVEL) ? 1U : 0U;
-    tsui.img_enable = (gpio_get_level(IMG_SWITCH_PIN) == IMG_SWITCH_ENABLE_LEVEL) ? 1U : 0U;
-    ui_switch_last = tsui.ui_enable;
-    img_switch_last = tsui.img_enable;
+    GUI_UpdateSwitchState();
     mt9v03x_dma_init((uint8 *)&g_dma_img[0][0], MT9V03X_IMAGE_SIZE, 0, 3, 3); // 启动首帧DMA采集
 
     while(1)
@@ -259,14 +203,7 @@ void main(void)
             loop_1ms_task();                                // 1ms周期任务入口（在主循环中执行）
         }
 
-        tsui.ui_enable = (gpio_get_level(GUI_SWITCH_PIN) == GUI_SWITCH_ENABLE_LEVEL) ? 1U : 0U;
-        tsui.img_enable = (gpio_get_level(IMG_SWITCH_PIN) == IMG_SWITCH_ENABLE_LEVEL) ? 1U : 0U;
-        if(tsui.ui_enable != ui_switch_last || tsui.img_enable != img_switch_last)
-        {
-            ips200_clear(RGB565_WHITE);                    // 开关状态变化时统一清屏，避免残影
-            ui_switch_last = tsui.ui_enable;
-            img_switch_last = tsui.img_enable;
-        }
+        GUI_UpdateSwitchState();
 
         if(mt9v03x_finish_flag)
         {

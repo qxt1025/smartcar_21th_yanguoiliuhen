@@ -131,4 +131,6 @@
 #include "application.h"
 
 //#include "GUI.h"
+
+#include "base.h"
 #endif

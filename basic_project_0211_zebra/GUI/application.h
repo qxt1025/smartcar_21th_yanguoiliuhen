@@ -23,6 +23,8 @@ extern struct paralist_s far paralist2[100];
 void GUI_Init();
 //扫描用户输入函数，放在定时器中断里
 void GUI_scan();
+//同步UI/图像显示开关状态，放在主循环中调用
+void GUI_UpdateSwitchState();
 //显示函数，此函数要放在main函数中的while内
 void GUI_Display();
 
