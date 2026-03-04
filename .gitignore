@@ -22,4 +22,8 @@ compile_commands.json
 # temp/backup
 *.bak
 *.dep
-*.uvguix.*
+
+# Keil personal files
+*.uvopt
+*.uvoptx
+*.uvgui*
