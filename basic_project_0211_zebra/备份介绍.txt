@@ -3,3 +3,7 @@
 
 260211版本
 完成路障和斑马线移植
+
+git add .
+git commit -m "你的修改说明"
+git push
