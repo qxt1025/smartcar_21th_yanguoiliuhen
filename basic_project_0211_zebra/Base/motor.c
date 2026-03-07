@@ -14,11 +14,11 @@ void motor_init()
 	//drv 2个pwm  7.5   7.7
 //2个dir      7.4   7.6
 	
-    pwm_init(PWMB_CH2_P75,17000,0);
-    pwm_init(PWMB_CH4_P77,17000,0);
+    pwm_init(PWMB_CH1_P74,17000,0);
+    pwm_init(PWMB_CH3_P76,17000,0);
 	
-    gpio_init(PWMB_CH1_P74,GPO,0,GPO_PUSH_PULL);
-    gpio_init(PWMB_CH3_P76,GPO,0,GPO_PUSH_PULL);
+    gpio_init(IO_P75,GPO,0,GPO_PUSH_PULL);
+    gpio_init(IO_P77,GPO,0,GPO_PUSH_PULL);
 
 	
    // pwm_init(ATOM1_CH6_P23_1,50,0);不知道是哪个
@@ -72,23 +72,23 @@ void set_pwm(int PWM_L,int PWM_R)
     }
     if(PWM_R<=0)
     {
-        pwm_set_duty(PWMB_CH2_P75,-PWM_R);
-        gpio_set_level(PWMB_CH1_P74,0);
+        pwm_set_duty(PWMB_CH1_P74,-PWM_R);
+        gpio_set_level(IO_P75,0);
     }
     else if(PWM_R>0)
     {
-        pwm_set_duty(PWMB_CH2_P75,PWM_R);
-        gpio_set_level(PWMB_CH1_P74,1);
+        pwm_set_duty(PWMB_CH1_P74,PWM_R);
+        gpio_set_level(IO_P75,1);
     }
     if(PWM_L>=0)
     {
-        pwm_set_duty(PWMB_CH4_P77,PWM_L);
-        gpio_set_level(PWMB_CH3_P76,0);
+        pwm_set_duty(PWMB_CH3_P76,PWM_L);
+        gpio_set_level(IO_P77,0);
     }
     else if(PWM_L<0)
     {
-        pwm_set_duty(PWMB_CH4_P77,-PWM_L);
-        gpio_set_level(PWMB_CH3_P76,1);
+        pwm_set_duty(PWMB_CH3_P76,-PWM_L);
+        gpio_set_level(IO_P77,1);
     }
 
 }

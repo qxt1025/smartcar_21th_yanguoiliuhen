@@ -17,8 +17,8 @@ void timer1_Call_Back()
     //printf("timer1 interrupt\r\n");
     GUI_scan();     //按键扫描
     //imu_get_data();//获取陀螺仪数据
-    beeping();//蜂鸣器计时
-    beep_warning(music);//蜂鸣器警告计时
+    //beeping();//蜂鸣器计时
+    //beep_warning(music);//蜂鸣器警告计时
     imu.pitch+=imu.gyroy*0.002;//角度积分
 //    imu.pitch+=imu.gyrox*0.002;//角度积分
 
