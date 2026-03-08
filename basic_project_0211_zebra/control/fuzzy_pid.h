@@ -4,7 +4,7 @@
  *  Created on: 2024Äê3ÔÂ25ÈÕ
  *      Author: 14250
  */
-
+#include "zf_common_headfile.h"
 #ifndef CODE_CONTROL_FUZZY_PID_H_
 #define CODE_CONTROL_FUZZY_PID_H_
 #include "global.h"

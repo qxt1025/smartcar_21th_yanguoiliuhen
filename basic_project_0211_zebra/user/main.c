@@ -292,7 +292,7 @@ static void pit_handler(void)
 static void tim1_ctrl_handler(void)
 {
     g_tim1_1ms_flag = 1U;                                   // 置位1ms周期任务标志
-    //set_pwm(2000,2000);
+    set_pwm(-1000,-1000);
     //timer1_Call_Back();
 }
 

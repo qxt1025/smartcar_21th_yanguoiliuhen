@@ -35,7 +35,7 @@ void hardwareinit(void)
 //    gpio_init(P20_8,GPO,1,GPO_PUSH_PULL);
 //    gpio_init(P20_9,GPO,1,GPO_PUSH_PULL);
 //    mpu_init();
-    imu660ra_init();
+//    imu660ra_init();
     act_perst_init();
     ips200_show_string(0, 0, "mt9v03x init.");
 

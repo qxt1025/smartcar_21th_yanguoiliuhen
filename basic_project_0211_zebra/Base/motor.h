@@ -7,7 +7,7 @@
 #define LEFT_MOTOR_PWM_PIN  PWMB_CH3_P76
 #define LEFT_MOTOR_DIR_PIN  IO_P77
 
-#define STEER_MID 4850
+#define STEER_MID 5250
 void motor_init();
 void set_pwm(int PWM_L,int PWM_R);
 void set_steer(int steer_pwm);
