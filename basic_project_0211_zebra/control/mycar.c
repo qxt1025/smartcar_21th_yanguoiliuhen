@@ -76,7 +76,7 @@ void dir_control()
             steer_buchang_cal();
             else mycar.steer_buchang=0;
 
-            set_steer(STEER_MID+mycar.steer_pwm+setpara.steer_adjust+mycar.steer_buchang);
+            set_steer(STEER_MID+/*mycar.steer_pwm+setpara.steer_adjust+mycar.steer_buchang*/-10*mycar.original_err);
 
 //        sprintf(page[5].line11,"steer_pwm=%d ",mycar.steer_pwm);
  //       sprintf(page[5].line12,"original_err=%.3f ",mycar.original_err);

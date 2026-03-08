@@ -141,22 +141,22 @@ void enter_task()
 		{
 			cross_detect();//务必放在第一个
 			//slope_enter();
-			black_obstacle_enter();
+			//black_obstacle_enter();
 			//obstacle_identification();
-            left_ring_first_angle(); //检测左环第一个角点
-            right_ring_first_angle();//检测右环第一个角点
+            //left_ring_first_angle(); //检测左环第一个角点
+            //right_ring_first_angle();//检测右环第一个角点
 
             /*if(setpara.cross_open_flag>=1){
             cross_enter();}*/
 
             //if(setpara.bla_obs_open_flag>=1){
 
-             zebra_enter();
+             //zebra_enter();
             }
             break;
         default:
             out_element();
-            zebra_out();
+            //zebra_out();
             break;
     }
     //zebra_indentification(); //斑马线识别
