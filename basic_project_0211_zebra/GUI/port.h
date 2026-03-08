@@ -19,15 +19,15 @@
 
 /**********gpio相关宏定义***********/
 //该定义兼容拨轮按钮，上拨所对引脚相当于KEY1_PIN，下拨所对引脚相当于KEY2_PIN，按下所对引脚相当于KEY3_PIN
-#define KEY1_PIN gpio_get_level(IO_PB3)
-#define KEY2_PIN gpio_get_level(IO_PB4)         //这几个引脚要改成自己的板子所对应的引脚，形式也要与自己的库一致
+#define KEY1_PIN 1//gpio_get_level(IO_PB3)
+#define KEY2_PIN 1//gpio_get_level(IO_PB4)         //这几个引脚要改成自己的板子所对应的引脚，形式也要与自己的库一致
 #define KEY3_PIN 1
 #define KEY4_PIN 1			//gpio_get_level(P22_2)
 
 //EC11编码器引脚电平读取函数
-#define PRESS_PIN gpio_get_level(IO_PB2)	//改成自己的库中对应读取引脚的函数
-#define CW_PIN    1//gpio_get_level(IO_PB4)
-#define CCW_PIN   1//gpio_get_level(IO_PB2)
+#define PRESS_PIN gpio_get_level(IO_PB4)	//改成自己的库中对应读取引脚的函数
+#define CW_PIN    gpio_get_level(IO_PB3)
+#define CCW_PIN   gpio_get_level(IO_PB2)
 
 //IO口电平读取函数
 #define GUI_gpio_get_level(gpio_pin)   gpio_get_level(gpio_pin)    //改成自己的库中对应读取引脚的函数
