@@ -30,7 +30,7 @@ int param_l=12;
 void Static_Parameters_display()
 {
 	//====================================第1页参数显示================================================//
-	sprintf(page[0].line1,"original_err=%d",mycar.original_err);
+	sprintf(page[0].line1,"o_err=%d",mycar.original_err);
 	sprintf(page[0].line2,"param_b=%d",param_b); 
 	sprintf(page[0].line3,"param_c=%d",param_c);
 
@@ -46,7 +46,7 @@ void Static_Parameters_display()
 	sprintf(page[1].line5,"param_k=%d",param_k);
 	sprintf(page[1].line6,"param_l=%d",param_l);
 //=========================第三页参数==========================================================
-	sprintf(page[0].line1,"param_a=%d",param_a);
+	/*sprintf(page[0].line1,"param_a=%d",param_a);
 	sprintf(page[0].line2,"param_b=%d",param_b); 
 	sprintf(page[0].line3,"param_c=%d",param_c);
 
@@ -68,5 +68,5 @@ void Static_Parameters_display()
 
 	sprintf(page[0].line4,"param_d=%d",param_d); 
 	sprintf(page[0].line5,"param_e=%d",param_e);
-	sprintf(page[0].line6,"param_f=%d",param_f);
+	sprintf(page[0].line6,"param_f=%d",param_f);*/
 }
