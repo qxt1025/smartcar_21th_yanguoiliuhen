@@ -69,7 +69,7 @@ void hardwareinit(void)
 //    mt9v03x_init();
 //    dl1b_init();
 //    GUI_Init();
-//    PID_init();
+    PID_init();
 //    ADRC_init();
 //    system_delay_ms(500);
 //    mpu_gyro_init();

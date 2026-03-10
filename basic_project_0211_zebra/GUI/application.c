@@ -10,8 +10,8 @@
 #include "display.h"
 #include "port.h"
 
-static uint8 ui_switch_last = 2;
-static uint8 img_switch_last = 2;
+static uint8 switch_state_last = 0xFFU;
+static GUI_DisplayModeEnum g_display_mode = GUI_MODE_ALL_OFF;
 
 /*
  * Purpose: GUI模块初始化入口
@@ -48,19 +48,26 @@ void GUI_scan()
  */
 void GUI_UpdateSwitchState()
 {
-    uint8 ui_enable = (gpio_get_level(GUI_SWITCH_PIN) == GUI_SWITCH_ENABLE_LEVEL) ? 1U : 0U;
-    uint8 img_enable = (gpio_get_level(IMG_SWITCH_PIN) == IMG_SWITCH_ENABLE_LEVEL) ? 1U : 0U;
+    uint8 gui_sw = (gpio_get_level(GUI_SWITCH_PIN) == GUI_SWITCH_ENABLE_LEVEL) ? 1U : 0U;
+    uint8 img_sw = (gpio_get_level(IMG_SWITCH_PIN) == IMG_SWITCH_ENABLE_LEVEL) ? 1U : 0U;
+    uint8 switch_state = (uint8)((gui_sw << 1) | img_sw);
 
-    tsui.ui_enable = ui_enable;
-    tsui.img_enable = img_enable;
+    g_display_mode = (GUI_DisplayModeEnum)switch_state;
 
-    if(2U != ui_switch_last && (ui_enable != ui_switch_last || img_enable != img_switch_last))
+    tsui.ui_enable = (g_display_mode == GUI_MODE_PARAM_ONLY) ? 1U : 0U;
+    tsui.img_enable = (g_display_mode == GUI_MODE_IMAGE_AND_MAIN_INFO) ? 1U : 0U;
+
+    if((0xFFU != switch_state_last) && (switch_state != switch_state_last))
     {
         ips200_clear(RGB565_WHITE);
     }
 
-    ui_switch_last = ui_enable;
-    img_switch_last = img_enable;
+    switch_state_last = switch_state;
+}
+
+GUI_DisplayModeEnum GUI_GetDisplayMode(void)
+{
+    return g_display_mode;
 }
 
 /*
@@ -71,16 +78,19 @@ void GUI_UpdateSwitchState()
  */
 void GUI_Display()//显示函数，此函数要放在main函数中的while内
 {
-    if(!tsui.ui_enable)
+    if(g_display_mode == GUI_MODE_PARAM_ONLY)
     {
-        return;
+        show_changeable();//GUI显示函数
+        //ips_display_page();
     }
-    if(tsui.img_enable)
+    else if(g_display_mode == GUI_MODE_IMAGE_AND_MAIN_INFO)
     {
         ips_show_img();
     }
-    show_changeable();//GUI显示函数
-    ips_display_page();
+    else
+    {
+        // GUI_MODE_ALL_OFF 和 GUI_MODE_RESERVED 均不显示
+    }
 }
 
 int test=0;//临时测试UI变量，后期可全部删除
@@ -128,3 +138,4 @@ struct paralist_s far paralist[100]=   //可调参数列表
 	{&test10,"test10",1}, 			//测试变量
      {0}//这个{0}作为结尾，不要删
 };
+
