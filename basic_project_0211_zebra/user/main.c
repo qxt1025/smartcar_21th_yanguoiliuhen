@@ -228,7 +228,20 @@ void main(void)
 			dir_control();
             //ips200_displayimage03x(g_frame_img[0], MT9V03X_W, MT9V03X_H);
             GUI_Display();
-            
+            if(GUI_GetDisplayMode() == GUI_MODE_IMAGE_AND_MAIN_INFO)
+            {
+                ips200_show_int32(32, 140, (int32)fps, 4);
+                /*ips200_show_int32(80, 160, (int32)mycar.original_err, 4);
+                ips200_show_int32(80, 180, (int32)watch.zebra_flag2, 4);
+                ips200_show_int32(80, 200, (int32)watch.jump_count, 4);
+                ips200_show_int32(80, 220, (int32)watch.cross, 4);
+                ips200_show_int32(80, 240, (int32)watch.black_obstacle_flag, 4);
+                ips200_show_int32(80, 260, (int32)watch.right_black, 4);
+                ips200_show_int32(80, 280, (int32)watch.InLoop, 4);
+                ips200_show_int32(160, 140, (int32)watch.InLoopAngleL, 4);
+                ips200_show_int32(160, 160, (int32)watch.InLoopAngleR, 4);*/
+            }
+
             t1 = get_ms_ticks();                           // 记录元素处理结束时间
             elem_loop_ms = t1 - t0;                        // 计算元素处理耗时
 
@@ -322,9 +335,4 @@ static void loop_1ms_task(void)
 //
 // 问题2：显示图像杂乱 错位
 //      检查摄像头信号线是否有松动
-
-
-
-
-
 
