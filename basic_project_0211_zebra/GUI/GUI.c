@@ -48,6 +48,7 @@ void UI_init()
     tsui.paraMax2= Get_maxpage(&paralist2[0]);
     tsui.ui_enable = 1;
     tsui.img_enable = 1;
+	init_setpara();
     //TSUI_FlashRead();
 }
 

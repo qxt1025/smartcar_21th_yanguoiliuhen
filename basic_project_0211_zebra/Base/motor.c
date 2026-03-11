@@ -33,8 +33,8 @@ void motor_init()
     pwm_init(PWME_CH1P_PA0,300,STEER_MID);
 }
 
-#define steer_pwm_max (5600)
-#define steer_pwm_min (4900)
+#define steer_pwm_max (5780)//(5600)
+#define steer_pwm_min (4690)//(4900)
 
 void set_steer(int steer_pwm)
 {

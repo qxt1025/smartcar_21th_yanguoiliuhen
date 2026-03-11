@@ -126,7 +126,7 @@ struct paralist_s far paralist[100]=   //可调参数列表
 {
     {&tsui.img_showmode,"img_showmode",1},            //显示屏图像显示模式
     {&tsui.flag_page,"flag_page",1},                  //静态参数页数
-	{&test,"test",1}, 			//测试变量
+	{&setpara.steer_adjust,"steer_adjust",1}, 			//测试变量
 	{&test2,"test2",1}, 			//测试变量
 	{&test3,"test3",1}, 			//测试变量
 	{&test4,"test4",1}, 			//测试变量
@@ -138,4 +138,26 @@ struct paralist_s far paralist[100]=   //可调参数列表
 	{&test10,"test10",1}, 			//测试变量
      {0}//这个{0}作为结尾，不要删
 };
+void GUI_Process(uint16 fps)
+{
+    GUI_UpdateSwitchState();
+    GUI_Display();
+
+    if(g_display_mode == GUI_MODE_IMAGE_AND_MAIN_INFO)
+    {
+        ips200_show_int32(30, 140, (int32)fps, 4);
+        ips200_show_int32(40, 155, (int32)mycar.original_err, 4);
+        ips200_show_int32(40, 170, (int32)mycar.steer_pwm, 4);
+        /*ips200_show_int32(80, 200, (int32)watch.jump_count, 4);
+        ips200_show_int32(80, 220, (int32)watch.cross, 4);
+        ips200_show_int32(80, 240, (int32)watch.black_obstacle_flag, 4);
+        ips200_show_int32(80, 260, (int32)watch.right_black, 4);
+        ips200_show_int32(80, 280, (int32)watch.InLoop, 4);
+        ips200_show_int32(160, 140, (int32)watch.InLoopAngleL, 4);
+        ips200_show_int32(160, 160, (int32)watch.InLoopAngleR, 4);*/
+
+        ips200_show_string(0, 155, "o_err");
+        ips200_show_string(0, 170, "s_pwm");
+    }
+}
 

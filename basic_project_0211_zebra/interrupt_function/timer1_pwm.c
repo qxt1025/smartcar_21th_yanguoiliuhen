@@ -26,7 +26,7 @@ void timer1_Call_Back()
     angal_integeral(imu.gyroz*0.001);//角度积分函数
 //    mycar.imu_speed+=imu.accx*0.001;
     //dir_control();//舵机控制
-    motor_control();//电机控制
+ //   motor_control();//电机控制
 //    timer1_adjust();//调试代码
     //dir_control();//舵机控制
 

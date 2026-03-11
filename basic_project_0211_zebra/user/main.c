@@ -191,7 +191,7 @@ void main(void)
     g_back_img = temp_img;                                  // 后备缓冲绑定到temp_img
     g_frame_img = mt9v03x_image;                            // 初始化算法读取缓冲
 
-    GUI_UpdateSwitchState();
+    GUI_Process(0U);
     mt9v03x_dma_init((uint8 *)&g_dma_img[0][0], MT9V03X_IMAGE_SIZE, 0, 3, 3); // 启动首帧DMA采集
 
     while(1)
@@ -202,9 +202,6 @@ void main(void)
             g_tim1_1ms_flag = 0;                            // 消费1ms标志，保证主循环仅执行一次周期任务
             loop_1ms_task();                                // 1ms周期任务入口（在主循环中执行）
         }
-
-        GUI_UpdateSwitchState();
-
         if(mt9v03x_finish_flag)
         {
             mt9v03x_finish_flag = 0;                       // 消费一帧完成标志
@@ -227,20 +224,7 @@ void main(void)
             original_err_calculation();                    // 计算原始偏差
 			dir_control();
             //ips200_displayimage03x(g_frame_img[0], MT9V03X_W, MT9V03X_H);
-            GUI_Display();
-            if(GUI_GetDisplayMode() == GUI_MODE_IMAGE_AND_MAIN_INFO)
-            {
-                ips200_show_int32(32, 140, (int32)fps, 4);
-                /*ips200_show_int32(80, 160, (int32)mycar.original_err, 4);
-                ips200_show_int32(80, 180, (int32)watch.zebra_flag2, 4);
-                ips200_show_int32(80, 200, (int32)watch.jump_count, 4);
-                ips200_show_int32(80, 220, (int32)watch.cross, 4);
-                ips200_show_int32(80, 240, (int32)watch.black_obstacle_flag, 4);
-                ips200_show_int32(80, 260, (int32)watch.right_black, 4);
-                ips200_show_int32(80, 280, (int32)watch.InLoop, 4);
-                ips200_show_int32(160, 140, (int32)watch.InLoopAngleL, 4);
-                ips200_show_int32(160, 160, (int32)watch.InLoopAngleR, 4);*/
-            }
+            GUI_Process(fps);
 
             t1 = get_ms_ticks();                           // 记录元素处理结束时间
             elem_loop_ms = t1 - t0;                        // 计算元素处理耗时
@@ -305,7 +289,7 @@ static void pit_handler(void)
 static void tim1_ctrl_handler(void)
 {
     g_tim1_1ms_flag = 1U;                                   // 置位1ms周期任务标志
-    //set_pwm(-1000,-1000);
+    set_pwm(-1300+mycar.steer_pwm,-1300-mycar.steer_pwm);
     timer1_Call_Back();
 }
 
