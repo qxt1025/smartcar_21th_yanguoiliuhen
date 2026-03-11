@@ -21,7 +21,8 @@ float speed_dif_list[30]={
 float speed_dif_list_left[30]={0.002,0.005,0.026,0.044,0.057,0.074,0.085,0.102,0.114,0.128,0.150,0.167,0.182,0.202,0.229,0.245,0.257,0.261};
 float speed_dif_list_right[30]={0.002,-0.003,-0.029,-0.042,-0.058,-0.073,-0.090,-0.107,-0.121,-0.134,-0.152,-0.166,-0.183,-0.204,-0.224,-0.246,-0.252,-0.261};
 
-
+/*速度决策相关，用于补偿打角
+但没用，都是0*/
 void steer_buchang_cal()
 {
     if(mycar.corner_flag==2&&watch.track_count>=70)mycar.steer_buchang=setpara.steer_buchang*(watch.track_count-70)/15;
@@ -123,7 +124,7 @@ void motor_control()
 
     if(mycar.speed_ctrl==1)
     {
-     //   updata_fuzzy_speed(mycar.original_err,imu.gyroz/(mycar.present_speed+0.01));
+     //   updata_fuzzy_speed(mycar.original_err,imu.gyroz/(mycar.present_speed+0.01));//模糊pid纯没用
     }
 //
 //    if(t==0)
@@ -131,8 +132,10 @@ void motor_control()
 //        mycar.steer_pwm=Steer_PWM_Cal(-mycar.original_err)+setpara.steer_adjust;
 //        set_steer(STEER_MID+mycar.steer_pwm);
 //    }
-    running_protect();//运行保护
-    fan_buchang_cal();
+   
+//running_protect();//运行保护，据说很好，先关掉
+//fan_buchang_cal();//风扇控制，调节下压力，据说没啥用
+
 //    speed_pid_adjust();
     common_running();
     if(mycar.car_running==0)
@@ -220,6 +223,7 @@ void common_running()
 //        mycar.target_right_speed=mycar.target_speed*(1+2*mycar.speed_right_differ/(1-mycar.speed_right_differ)*(1000+setpara.differ_ratio)/1000);
         /////后轮差速
         // 根据转向角度计算左右轮的速度，以实现差速转向
+        //这部分差速只是单边减速，不是一边加速一边减速的最佳方案
 					if (mycar.steer_pwm >= 0)
 					{
 							mycar.speed_left_differ = (float)tan((double)((float)mycar.steer_pwm * 3.1415926535898/ 1800.0f / 2.0f))
@@ -245,6 +249,8 @@ void common_running()
         //电流环串速度环
 //        mycar.target_current_l=PID_Positional(&Speed_left, mycar.left_speed, mycar.target_left_speed);
 //        mycar.target_current_r=PID_Positional(&Speed_right, mycar.right_speed, mycar.target_right_speed);
+       mycar.target_current_l=PID_Positional(&Speed_left, mycar.left_speed, mycar.target_left_speed);
+       mycar.target_current_r=PID_Positional(&Speed_right, mycar.right_speed, mycar.target_right_speed);
 
         //纯速度环
         mycar.left_pwm_set=PID_Incremental(&Speed_left,mycar.left_speed,mycar.target_left_speed);//+setpara.speed_kf*Speed_left.kf_ratio*mycar.target_left_speed;

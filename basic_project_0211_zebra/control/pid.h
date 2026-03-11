@@ -344,6 +344,7 @@ extern struct setpara_STRUCT far setpara;
 void change_pid_para(PID_STRUCT *PID,PID_para_STRUCT*PID_para);
 void clear_integral(PID_STRUCT *PID);
 void PID_init();
+void init_setpara();
 
 float PID_Positional(PID_STRUCT* PID,float present_value,float target_value);
 float PID_Incremental(PID_STRUCT* PID,float present_value,float target_value);

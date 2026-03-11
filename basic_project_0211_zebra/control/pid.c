@@ -274,7 +274,7 @@ void init_setpara()//¸÷¸ö²ÎÊıµÄ³õÊ¼»¯£¬²»ÔÚ²ÎÊı±íÉÏµÄ²ÎÊıÈÔÈ»¿ÉÒÔÕı³£³õÊ¼»¯ÓëÊ¹Ó
 
     setpara.track_diff_cutoff=100;
     setpara.steer_buchang=0;
-    setpara.steer_adjust=-30;
+    setpara.steer_adjust=0;
     setpara.zebra_distance=0;
     setpara.cross_open_flag=1;
     setpara.bla_obs_open_flag=1;

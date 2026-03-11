@@ -202,7 +202,7 @@ int cam_err_calculation()
 
 
 int prev_track_diff_cutoff_freq = 0;
-
+//这个函数中CAM_Turn.PID_para没有定义，相关变量都为0
 filter_handle_s track_diff_filter;
 int Steer_PWM_Cal(int track_pos)
 {
@@ -213,7 +213,7 @@ int Steer_PWM_Cal(int track_pos)
     // 计算非线性车道线位置
     mycar.nonlinear_trackpos =  track_pos ;
     // 计算比例系数
-    mycar.Steer_PWM_Kp = (int)( CAM_Turn.kp_ratio* CAM_Turn.PID_para->kp * mycar.nonlinear_trackpos);
+    mycar.Steer_PWM_Kp = (int)( CAM_Turn.kp_ratio* 40/*CAM_Turn.PID_para->kp*/ * mycar.nonlinear_trackpos);
 
     // 车道线位置差分
     //    if ((!track_diff_filter.is_inited) || setpara.track_diff_cutoff != prev_track_diff_cutoff_freq) {
@@ -221,7 +221,7 @@ int Steer_PWM_Cal(int track_pos)
 //        if (setpara.track_diff_cutoff > 5) {
 //            cutoff = (float)setpara.track_diff_cutoff;
 //        }
-    if (!track_diff_filter.is_inited) {
+    if (!track_diff_filter.is_inited) {//这句话实际没有用
         cutoff = 5;
 //        filter_calc_butterworth_2nd_lowpass_coeff(&track_diff_filter, cutoff, 1000 / 2);//pit_ms=6.25
     }
@@ -236,7 +236,7 @@ int Steer_PWM_Cal(int track_pos)
     // 计算微分系数
     if(fabs(mycar.track_diff)<=2)mycar.Steer_PWM_Kd=0;
     else
-    mycar.Steer_PWM_Kd = (int)(CAM_Turn.kd_ratio* CAM_Turn.PID_para->kd * mycar.track_diff);
+    mycar.Steer_PWM_Kd = (int)(CAM_Turn.kd_ratio* 1/*CAM_Turn.PID_para->kd*/ * mycar.track_diff);
     // 计算方向盘 PWM
 //    mycar.Steer_PWM_Kp = (mycar.Steer_PWM_Kp > 900 ? 900 : (mycar.Steer_PWM_Kp < -900 ? -900 : mycar.Steer_PWM_Kp));
     mycar.Steer_PWM_Kd = (mycar.Steer_PWM_Kd > 600 ? 600 : (mycar.Steer_PWM_Kd < -600 ? -600 : mycar.Steer_PWM_Kd));
@@ -245,7 +245,7 @@ int Steer_PWM_Cal(int track_pos)
     prev_nonlinear_track_pos = mycar.nonlinear_trackpos;
     steertemp = (steertemp > 1000 ? 1000 : (steertemp < -1000 ? -1000 : steertemp));
 
-    return 1.f * 500 * steertemp / 1000;
+    return 1.f * 600 * steertemp / 1000;
 }
 
 

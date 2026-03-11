@@ -37,5 +37,7 @@ void GUI_UpdateSwitchState();
 GUI_DisplayModeEnum GUI_GetDisplayMode(void);
 // 显示函数，此函数要放在main函数中的while内
 void GUI_Display();
+// UI统一处理入口（开关同步+显示刷新）
+void GUI_Process(uint16 fps);
 
 #endif /* CODE_GUI_APPLICATION_H_ */

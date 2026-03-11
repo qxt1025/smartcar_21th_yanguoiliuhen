@@ -83,5 +83,5 @@ void hardwareinit(void)
 //    adc_init(ADC0_CH11_A11,ADC_12BIT);
 ////    element_init();
 ////    element_init();
-//    clear_all_flags();
+    clear_all_flags();
 }
