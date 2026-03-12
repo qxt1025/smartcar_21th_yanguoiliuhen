@@ -507,22 +507,26 @@ void cross_detect()
 		{//四个点都在，无脑连线，这种情况显然很少
 			Left_Add_Line (lineinfo[watch.left_up_find].left,watch.left_up_find ,lineinfo[watch.left_down_find].left,watch.left_down_find);
 			Right_Add_Line(lineinfo[watch.right_up_find].right,watch.right_up_find ,lineinfo[watch.right_down_find].right,watch.right_down_find);
-		}
+            watch.cross_state = 4;
+        }
 		else if(watch.left_down_find==0&&watch.right_down_find!=0)//11//这里使用的是斜率补线
 		{//三个点                                     //01
 			Lengthen_Left_Boundry(watch.left_up_find+1,0);
 			Right_Add_Line(lineinfo[watch.right_up_find].right,watch.right_up_find ,lineinfo[watch.right_down_find].right,watch.right_down_find);
-		}
+		     watch.cross_state = 3;
+        }
 		else if(watch.left_down_find!=0&&watch.right_down_find==0)//11
 		{//三个点                                      //10
 			Left_Add_Line (lineinfo[watch.left_up_find].left,watch.left_up_find ,lineinfo[watch.left_down_find].left,watch.left_down_find);
 			Lengthen_Right_Boundry(watch.right_up_find+1,0);
-		}
+             watch.cross_state = 2;
+        }
 		else if(watch.left_down_find==0&&watch.right_down_find==0)//11
 		{//就俩上点                                    //00
 			Lengthen_Left_Boundry(watch.left_up_find+1,0);
 			Lengthen_Right_Boundry(watch.right_up_find+1,0);
-		}
+             watch.cross_state = 1;
+        }
 	}
 	else
 	{

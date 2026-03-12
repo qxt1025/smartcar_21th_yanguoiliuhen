@@ -22,7 +22,7 @@ void motor_init()
     // 预留的 PWM 通道，保留作硬件接线参考。
     // pwm_init(ATOM1_CH6_P23_1,50,0);
 
-    // 无刷风扇。
+    // 无刷风扇
     pwm_init(PWMF_CH1_PA1,50,0);
     pwm_init(PWMF_CH2_PA3,50,0);
 
@@ -33,8 +33,8 @@ void motor_init()
     pwm_init(PWME_CH1P_PA0,300,STEER_MID);
 }
 
-#define steer_pwm_max (5780)//(5600)
-#define steer_pwm_min (4690)//(4900)
+#define steer_pwm_max (STEER_MID+450)//(5600)
+#define steer_pwm_min (STEER_MID-460)//(4900)
 
 void set_steer(int steer_pwm)
 {
