@@ -148,8 +148,8 @@ void GUI_Process(uint16 fps)
         ips200_show_int32(30, 140, (int32)fps, 4);
         ips200_show_int32(40, 155, (int32)mycar.original_err, 4);
         ips200_show_int32(40, 170, (int32)mycar.steer_pwm, 4);
-        /*ips200_show_int32(80, 200, (int32)watch.jump_count, 4);
-        ips200_show_int32(80, 220, (int32)watch.cross, 4);
+        ips200_show_int32(40, 185, (int32)watch.cross_state, 4);
+        /*ips200_show_int32(80, 220, (int32)watch.cross, 4);
         ips200_show_int32(80, 240, (int32)watch.black_obstacle_flag, 4);
         ips200_show_int32(80, 260, (int32)watch.right_black, 4);
         ips200_show_int32(80, 280, (int32)watch.InLoop, 4);
@@ -158,6 +158,7 @@ void GUI_Process(uint16 fps)
 
         ips200_show_string(0, 155, "o_err");
         ips200_show_string(0, 170, "s_pwm");
+        ips200_show_string(0, 185, "cro_st");
     }
 }
 

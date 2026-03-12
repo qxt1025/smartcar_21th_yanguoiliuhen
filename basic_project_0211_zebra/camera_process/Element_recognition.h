@@ -49,6 +49,8 @@ struct watch_o
     uint8 watch_line;
     uint8 watch_lost;    // 摄像头所能看到赛道的最远端
 
+    uint8 cross_state;
+
     /* 统计丢线相关变量 */
     uint8 cross;            // 左右都丢线的行数
     uint8 left_lost;        // 左边线丢线行数
