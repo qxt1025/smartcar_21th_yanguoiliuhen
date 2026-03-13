@@ -110,8 +110,8 @@
 #include "search_line.h"
 #include "user_function.h"
 
-
-
+#include "Binarization.h"
+#include "scan_line.h"
 #include "type_def.h"
 
 #include "patch_line.h"

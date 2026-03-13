@@ -193,7 +193,7 @@ void main(void)
 
     GUI_Process(0U);
     mt9v03x_dma_init((uint8 *)&g_dma_img[0][0], MT9V03X_IMAGE_SIZE, 0, 3, 3); // 启动首帧DMA采集
-
+    //watch.threshold = 80;
     while(1)
     {
         // 此处编写需要循环执行的代码
@@ -209,11 +209,25 @@ void main(void)
             /******预处理过程耗时计算*******/
             t0 = get_ms_ticks();                           // 记录预处理开始时间
             camera_switch_buffer();                        // 完成DMA/处理缓冲切换
-            get_reference_point(g_frame_img[0]);           // 找参考白点灰度值
+
+            /*get_reference_point(g_frame_img[0]);           // 找参考白点灰度值
             search_reference_col(g_frame_img[0]);          // 找最长白列
             search_line(g_frame_img[0]);                   // 对比度搜线
             post_process_lines();                          // lineinfo结构体赋值
-            count_line_lost();                             // 丢线统计（watch相关参数赋值）
+            count_line_lost(); */                            // 丢线统计（watch相关参数赋值）
+            watch.threshold = img_otsu((uint16_t *)g_frame_img[30], 60, MT9V03X_W, 10)  ; 
+            /* 二值化阈值限幅 */
+            if(watch.threshold>140)
+            {
+                watch.threshold=140;
+            }
+            else if(watch.threshold<80)
+            {
+                watch.threshold=80;//防止冲出赛道失控
+            }
+            scan_line();
+            line_lost();
+            
             t1 = get_ms_ticks();                           // 记录预处理结束时间
             proc_last_ms = t1 - t0;                        // 计算预处理耗时
 
@@ -259,7 +273,7 @@ void main(void)
             //ips200_show_int32(160, 140, (int32)watch.InLoopAngleL, 4);
             //ips200_show_int32(160, 160, (int32)watch.InLoopAngleR, 4);
             //printf("o_err:%d\r\n",mycar.original_err);
-            //printf("FPS:%u,PROC_MS:%lu,ELEM_MS:%lu\r\n",fps, proc_last_ms, elem_loop_ms); // 串口输出运行耗时
+            printf("FPS:%u,PROC_MS:%lu,ELEM_MS:%lu\r\n",fps, proc_last_ms, elem_loop_ms); // 串口输出运行耗时
         }
 
         // 此处编写需要循环执行的代码
