@@ -84,10 +84,10 @@ void Element_recognition()
             obstacle_stop();
             break;*/
         case crossing:
-            /*cross_running();
+            cross_running();
             cross_running2();
-            cross_out();*/
-			cross_detect();
+            cross_out();
+			//cross_detect();
             break;
         /*case Slope:
             slope_down();
@@ -139,15 +139,15 @@ void enter_task()
         case 0:            //元素标记为0时自动扫描元素
            // if(mycar.RUNTIME>=setpara.begin_time||mycar.car_running==0)
 		{
-			cross_detect();//务必放在第一个
+			//cross_detect();//务必放在第一个
 			//slope_enter();
 			//black_obstacle_enter();
 			//obstacle_identification();
             //left_ring_first_angle(); //检测左环第一个角点
             //right_ring_first_angle();//检测右环第一个角点
 
-            /*if(setpara.cross_open_flag>=1){
-            cross_enter();}*/
+            if(1/*setpara.cross_open_flag>=1*/){
+            cross_enter();}
 
             //if(setpara.bla_obs_open_flag>=1){
 

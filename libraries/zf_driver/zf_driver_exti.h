@@ -68,6 +68,8 @@ typedef enum
 }INT_MODE_enum;
 
 
+extern callback_function int_irq_handlers[5];
+
 void exit_init(INTN_enum int_n,INT_MODE_enum mode);
 
 

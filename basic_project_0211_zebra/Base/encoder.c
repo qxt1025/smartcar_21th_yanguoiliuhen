@@ -10,18 +10,70 @@
 //每个脉冲约 8.6x10^-5 米
 //可以配合定时器中断计算出实际速度
 //编码器初始化
+#define ENCODER_QUAD_1                 	(PWMA_ENCODER)              // 带方向编码器对应使用的编码器接口 
+#define ENCODER_QUAD_1_CHA            	(PWMA_ENCODER_CH1P_P60)     // PULSE 对应的引脚
+#define ENCODER_QUAD_1_CHB              (PWMA_ENCODER_CH2P_P62)     // DIR 对应的引脚
+
+#define ENCODER_QUAD_2                 	(PWMC_ENCODER)              // 带方向编码器对应使用的编码器接口
+#define ENCODER_QUAD_2_CHA   		    (PWMC_ENCODER_CH1P_P40)     // PULSE 对应的引脚
+#define ENCODER_QUAD_2_CHB       	    (PWMC_ENCODER_CH2P_P42)     // DIR 对应的引脚
+
 encoder_STRUCT encoder;
+
+/*
+ * Force PWMA/PWMC key registers into quadrature-decoder mode.
+ * Keep quadrature mode and explicit pin mux for P60/P62 and P40/P42.
+ */
+static void encoder_quad_hw_force(void)
+{
+    uint8 eaxfr_backup = EAXFR;
+    EAXFR = 1;
+
+    PWMA_CR1 &= (uint8)~0x01U;
+    PWMA_PS = (PWMA_PS & 0xF0U) | 0x0AU;
+    PWMA_ARRH = 0xFFU;
+    PWMA_ARRL = 0xFFU;
+    PWMA_PSCRH = 0x00U;
+    PWMA_PSCRL = 0x00U;
+    PWMA_CCER1 = 0x00U;
+    PWMA_CCER2 = 0x00U;
+    PWMA_CCMR1 = (PWMA_CCMR1 & 0xFCU) | 0x01U;
+    PWMA_CCMR2 = (PWMA_CCMR2 & 0xFCU) | 0x01U;
+    PWMA_SMCR = 0x03U;
+    PWMA_CR1 |= 0x01U;
+
+    PWMC_CR1 &= (uint8)~0x01U;
+    PWMC_PS = (PWMC_PS & 0xF0U) | 0x0AU;
+    PWMC_ARRH = 0xFFU;
+    PWMC_ARRL = 0xFFU;
+    PWMC_PSCRH = 0x00U;
+    PWMC_PSCRL = 0x00U;
+    PWMC_CCER1 = 0x00U;
+    PWMC_CCER2 = 0x00U;
+    PWMC_CCMR1 = (PWMC_CCMR1 & 0xFCU) | 0x01U;
+    PWMC_CCMR2 = (PWMC_CCMR2 & 0xFCU) | 0x01U;
+    PWMC_SMCR = 0x03U;
+    PWMC_CR1 |= 0x01U;
+
+    EAXFR = eaxfr_backup;
+}
+void encoder_quad_force_recover(void)
+{
+    encoder_quad_hw_force();
+}
+
 void encoder_init()
 {
-      encoder_quad_init(PWMA_ENCODER, PWMA_ENCODER_CH1P_P60, PWMA_ENCODER_CH2P_P62);   // 初始化编码器模块与引脚 带方向增量编码器模式
-    encoder_quad_init(PWMC_ENCODER, PWMC_ENCODER_CH1P_P40, PWMC_ENCODER_CH2P_P42);   // 初始化编码器模块与引脚 带方向增量编码器模式
+    encoder_quad_init(ENCODER_QUAD_1, ENCODER_QUAD_1_CHA, ENCODER_QUAD_1_CHB);   // 初始化编码器模块与引脚 正交解码编码器模式
+    encoder_quad_init(ENCODER_QUAD_2, ENCODER_QUAD_2_CHA, ENCODER_QUAD_2_CHB);   // 初始化编码器模块与引脚 正交解码编码器模式
+    encoder_quad_force_recover();                                                 // O7下补强关键寄存器
 }
 //读取编码器的数据（包含滑动平均滤波）单位：m/s
 float encoder_get_speed_Left()
 {
     int16 speed;
     static float speed_least;
-    speed=encoder_get_count(PWMA_ENCODER);
+    speed=-encoder_get_count(PWMA_ENCODER);
     encoder_clear_count(PWMA_ENCODER);
     speed_least=moving_average_filtre_left_speed(speed);
 //    speed_least=left_speed_Kalman_Filter(speed,-0.10*imu.accx,imu.gyroz);
@@ -34,7 +86,7 @@ float encoder_get_speed_Right()
 {
     static float speed_least;
     int16 speed;
-    speed=-encoder_get_count(PWMC_ENCODER);
+    speed=encoder_get_count(PWMC_ENCODER);
     encoder_clear_count(PWMC_ENCODER);
     speed_least=moving_average_filtre_right_speed(speed);
 //    speed_least=right_speed_Kalman_Filter(speed,-0.10*imu.accx,imu.gyroz);
@@ -166,3 +218,4 @@ float right_speed_Kalman_Filter(float speed_measure,float accel_x,float gyroz)
     right_predict_var = (right_predict_var * speed_var) /((right_predict_var + speed_var) *(right_predict_var + speed_var));
     return right_speed_predict;
 }
+

@@ -177,7 +177,6 @@ void main(void)
     static uint32 proc_last_ms = 0;                        // 预处理耗时(ms)
     static uint32 elem_loop_ms = 0;                        // 元素识别与后处理耗时(ms)
 
-
     clock_init(SYSTEM_CLOCK_96M);                          // 时钟配置及系统初始化<务必保留>
     debug_init();                                          // 调试串口初始化
     hardwareinit();                                         // 总初始化
@@ -272,7 +271,8 @@ void main(void)
             //ips200_show_int32(80, 280, (int32)watch.InLoop, 4);
             //ips200_show_int32(160, 140, (int32)watch.InLoopAngleL, 4);
             //ips200_show_int32(160, 160, (int32)watch.InLoopAngleR, 4);
-            //printf("o_err:%d\r\n",mycar.original_err);
+            
+            //printf("enc_l:%d enc_r:%d speed:%d\r\n", (int16)mycar.left_speed, (int16)mycar.right_speed, (int16)mycar.present_speed);
             printf("FPS:%u,PROC_MS:%lu,ELEM_MS:%lu\r\n",fps, proc_last_ms, elem_loop_ms); // 串口输出运行耗时
         }
 
@@ -290,8 +290,8 @@ void main(void)
  */
 static void pit_handler(void)
 {
-	//printf("hello");
     g_ms_ticks++;                                           // 累加全局毫秒计数
+    //timer4_Call_Back();
 }
 
 /*
@@ -303,8 +303,9 @@ static void pit_handler(void)
 static void tim1_ctrl_handler(void)
 {
     g_tim1_1ms_flag = 1U;                                   // 置位1ms周期任务标志
-    set_pwm(-1300+mycar.steer_pwm,-1300-mycar.steer_pwm);
+    set_pwm(-1500+mycar.steer_pwm,-1500-mycar.steer_pwm);
     timer1_Call_Back();
+       
 }
 
 /*
@@ -333,4 +334,3 @@ static void loop_1ms_task(void)
 //
 // 问题2：显示图像杂乱 错位
 //      检查摄像头信号线是否有松动
-

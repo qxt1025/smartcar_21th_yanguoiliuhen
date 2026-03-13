@@ -89,6 +89,10 @@ void dir_control()
 //电机控制
 void motor_control()
 {
+    int16 enc_left_now = 0;
+    int16 enc_right_now = 0;
+
+    encoder_quad_force_recover();                         // 1ms控制环内补强编码器寄存器
 //    static uint8 t=0;
 //    t=!t;
 //    mycar.target_speed=setpara.speed_min;
@@ -106,9 +110,12 @@ void motor_control()
 
     //mycar.speed_left_differ=0;//计算左轮差速
     //mycar.speed_right_differ=0;//计算右轮差速
-    mycar.left_speed=encoder_get_speed_Left();
-    mycar.right_speed=encoder_get_speed_Right();
-    mycar.present_speed=(mycar.left_speed+mycar.right_speed)/2;
+
+    enc_left_now = (int16)encoder_get_speed_Left();
+    enc_right_now = (int16)encoder_get_speed_Right();
+    mycar.left_speed = enc_left_now;
+    mycar.right_speed = enc_right_now;
+    mycar.present_speed = (mycar.left_speed + mycar.right_speed) / 2;
 //    if(mycar.present_speed>=10000){
 //        mycar.distance_count++;
 //        encoder_clear_count(TIM2_ENCODER);
@@ -137,8 +144,8 @@ void motor_control()
 //fan_buchang_cal();//风扇控制，调节下压力，据说没啥用
 
 //    speed_pid_adjust();
-    common_running();
-    if(mycar.car_running==0)
+    //common_running();
+    /*if(mycar.car_running==0)
     {
         if(mycar.start_warn_flag==0)
         fan_begin(setpara.fan_start);
@@ -146,7 +153,7 @@ void motor_control()
         set_pwm(setpara.pwm_adjust,setpara.pwm_adjust);
         clear_integral(&Speed_middle);
         clear_integral(&gyro);
-    }
+    }*/
 
 }
 //调试速度环的函数

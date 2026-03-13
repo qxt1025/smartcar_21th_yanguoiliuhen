@@ -14,7 +14,7 @@ void hardwareinit(void)
 
     ips200_init();
     motor_init();
-//    encoder_init();
+    encoder_init();
 //    gpio_init(P14_2,GPO,0,GPO_PUSH_PULL);
 //    gpio_init(P14_3,GPI,0,GPI_PULL_DOWN);
 //    gpio_init(P15_8,GPI,0,GPI_PULL_UP);
@@ -27,7 +27,8 @@ void hardwareinit(void)
 //    tft180_init();
 //    ips200_init(IPS200_TYPE_SPI);
 //    gpio_init(P33_10,GPO,0,GPO_PUSH_PULL);
-//    beep_init();
+    beep_init();
+    beep_power_on_self_test();
 
 //    gpio_init(P20_3,GPI,0,GPI_PULL_UP);
 //    gpio_init(P20_0,GPI,0,GPI_PULL_UP);
@@ -35,7 +36,7 @@ void hardwareinit(void)
 //    gpio_init(P20_8,GPO,1,GPO_PUSH_PULL);
 //    gpio_init(P20_9,GPO,1,GPO_PUSH_PULL);
 //    mpu_init();
-//    imu660ra_init();
+    imu660ra_init();
     act_perst_init();
     ips200_show_string(0, 0, "mt9v03x init.");
 
