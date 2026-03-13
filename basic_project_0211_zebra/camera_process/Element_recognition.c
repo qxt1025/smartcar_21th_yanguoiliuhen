@@ -307,7 +307,7 @@ void clear_all_flags()
 
 void line_lost()
 {
-    /*
+
     int y = 0;
     watch.left_lost = 0;
     watch.right_lost = 0;
@@ -347,7 +347,7 @@ void line_lost()
         {
             watch.cross++;
         }
-    }*/
+    }
 }
 
 void find_down_point(int start,int end)

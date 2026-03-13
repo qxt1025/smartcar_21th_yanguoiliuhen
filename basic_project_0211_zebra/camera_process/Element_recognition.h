@@ -63,7 +63,6 @@ struct watch_o
     uint8 right_down_find;
     uint8 left_up_find;
     uint8 right_up_find;
-    uint8 cross_flag;
 	uint8 left_black;
 	uint8 right_black;
 
@@ -137,6 +136,20 @@ struct watch_o
     uint8 out_garage_flag; // 出库标记位
     uint8 garage_stop;     // 停车标记位
     uint8 garage_flag;
+
+    //十字的标志位
+
+    uint8 cross_flag;
+    uint8 cross_RD_angle;//十字右下角点
+    uint8 cross_LD_angle;//十字左下角点
+
+    uint8 cross_line;
+    uint8 DectectStart;
+    uint8 cross_lost;
+    uint8 cross_AngleL;
+    uint8 cross_AngleR;
+    uint8 cross_AngleL_x;
+    uint8 cross_AngleR_x;
 
     /* 斑马线相关 */
     uint8 ZebraInLine;
