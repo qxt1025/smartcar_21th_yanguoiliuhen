@@ -30,10 +30,10 @@ void cross_enter(void)
     {
         if(lineinfo[y].left_lost &&
            lineinfo[y].right_lost &&
-           (g_frame_img[CROSS_IMG_ROW_MAX - y][CROSS_IMG_COL_CENTER_L] == 255U) &&
-           (g_frame_img[CROSS_IMG_ROW_MAX - y][CROSS_IMG_COL_CENTER_R] == 255U) &&
-           (g_frame_img[CROSS_IMG_ROW_MAX - y][CROSS_IMG_COL_LEFT] == 255U) &&
-           (g_frame_img[CROSS_IMG_ROW_MAX - y][CROSS_IMG_COL_RIGHT] == 255U) &&
+           (g_frame_img[CROSS_IMG_ROW_MAX - y][CROSS_IMG_COL_CENTER_L] > watch.threshold) &&
+           (g_frame_img[CROSS_IMG_ROW_MAX - y][CROSS_IMG_COL_CENTER_R] > watch.threshold) &&
+           (g_frame_img[CROSS_IMG_ROW_MAX - y][CROSS_IMG_COL_LEFT] > watch.threshold) &&
+           (g_frame_img[CROSS_IMG_ROW_MAX - y][CROSS_IMG_COL_RIGHT] > watch.threshold) &&
            (y < watch.track_count_far))
         {
             cross_count++; /* 累加远处横向全白且双边丢线行数 */
@@ -77,10 +77,10 @@ void cross_enter(void)
                (lineinfo[y].right < lineinfo[y + 2U].right) &&
                (lineinfo[y + 1U].right < lineinfo[y + 3U].right) &&
                (col_right <= (CROSS_IMG_COL_RIGHT - 5U)) && /* 防越界: col_right + 5 */
-               (g_frame_img[CROSS_IMG_ROW_MAX - y - 2U][col_right] == 255U) &&
-               (g_frame_img[CROSS_IMG_ROW_MAX - y - 3U][col_right] == 255U) &&
-               (g_frame_img[CROSS_IMG_ROW_MAX - y - 4U][col_right] == 255U) &&
-               (g_frame_img[CROSS_IMG_ROW_MAX - y - 5U][col_right + 5U] == 255U))
+               (g_frame_img[CROSS_IMG_ROW_MAX - y - 2U][col_right] > watch.threshold) &&
+               (g_frame_img[CROSS_IMG_ROW_MAX - y - 3U][col_right] > watch.threshold) &&
+               (g_frame_img[CROSS_IMG_ROW_MAX - y - 4U][col_right] > watch.threshold) &&
+               (g_frame_img[CROSS_IMG_ROW_MAX - y - 5U][col_right + 5U] > watch.threshold))
             {
                 enter_element(crossing);       /* 右倾进入十字，切换元素状态 */
                 set_speed(setpara.cross_speed);
@@ -110,10 +110,10 @@ void cross_enter(void)
                     (lineinfo[y].left > lineinfo[y + 2U].left) &&
                     (lineinfo[y + 1U].left > lineinfo[y + 3U].left) &&
                     (col_left >= 5U) &&         /* 防越界: col_left - 5 */
-                    (g_frame_img[CROSS_IMG_ROW_MAX - y - 2U][col_left] == 255U) &&
-                    (g_frame_img[CROSS_IMG_ROW_MAX - y - 3U][col_left] == 255U) &&
-                    (g_frame_img[CROSS_IMG_ROW_MAX - y - 4U][col_left] == 255U) &&
-                    (g_frame_img[CROSS_IMG_ROW_MAX - y - 5U][col_left - 5U] == 255U))
+                    (g_frame_img[CROSS_IMG_ROW_MAX - y - 2U][col_left] > watch.threshold) &&
+                    (g_frame_img[CROSS_IMG_ROW_MAX - y - 3U][col_left] > watch.threshold) &&
+                    (g_frame_img[CROSS_IMG_ROW_MAX - y - 4U][col_left] > watch.threshold) &&
+                    (g_frame_img[CROSS_IMG_ROW_MAX - y - 5U][col_left - 5U] > watch.threshold))
             {
                 enter_element(crossing);       /* 左倾进入十字，切换元素状态 */
                 watch.cross_LD_angle = y;      /* 保存左倾交点初值行号 */
@@ -153,7 +153,7 @@ void cross_running2(void)
                (lineinfo[y - 1U].right <= lineinfo[y - 2U].right) &&
                (lineinfo[y - 2U].right <= lineinfo[y - 3U].right) &&
                (y < watch.cross_RD_angle) &&
-               (g_frame_img[CROSS_IMG_ROW_MAX - y - 2U][col] == 255U) &&
+               (g_frame_img[CROSS_IMG_ROW_MAX - y - 2U][col] > watch.threshold) &&
                (lineinfo[y - 2U].right < lineinfo[y - 4U].right) &&
                (lineinfo[y - 1U].right < lineinfo[y - 3U].right) &&
                (lineinfo[y].right < lineinfo[y - 2U].right) &&
@@ -175,7 +175,7 @@ void cross_running2(void)
                (lineinfo[y - 1U].left >= lineinfo[y - 2U].left) &&
                (lineinfo[y - 2U].left >= lineinfo[y - 3U].left) &&
                (y < watch.cross_LD_angle) &&
-               (g_frame_img[CROSS_IMG_ROW_MAX - y - 2U][col] == 255U) &&
+               (g_frame_img[CROSS_IMG_ROW_MAX - y - 2U][col] > watch.threshold) &&
                (lineinfo[y - 2U].left > lineinfo[y - 4U].left) &&
                (lineinfo[y - 1U].left > lineinfo[y - 3U].left) &&
                (lineinfo[y].left > lineinfo[y - 2U].left) &&
@@ -278,10 +278,11 @@ void cross_out(void)
     {
         clear_distant_integeral();   /* 清除十字积分状态 */
         out_element();               /* 退出当前元素状态机 */
-        beep2(3U, 100U);             /* 蜂鸣提示一次元素完成 */
+        beep2(5, 200U);             /* 蜂鸣提示一次元素完成 */
     }
     else if(!lineinfo[65].left_lost && !lineinfo[65].right_lost)
     {
         watch.angle_far_line = 70;   /* 双边恢复后收回远线关注高度 */
     }
 }
+

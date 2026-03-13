@@ -37,7 +37,7 @@ void linefix()
             else if (watch.zebra_flag2==1 && watch.Zebra_Angle2 < 68) ingarage_linefix_2(); */
            // break;
         case crossing:
-            common_linefix();
+            crossing_linefix();
             break;
         case obstacle:
             obstacle_linefix();
@@ -289,102 +289,145 @@ void garage_linefix()
 
     }*/
 }
+/*
+ * Purpose: 十字元素补线并执行逆透视变换
+ * Param  : 无
+ * Return : 无
+ * Note   : 根据 cross_flag 区分标准十字与倾斜进入两类补线策略
+ */
 void crossing_linefix()
 {
-	/*
-    int bottom_l,bottom_r;
-    static float top_x;
-    static float  SlopeR,SlopeL;
-    for (int y =forward_near; y <=watch.watch_lost; y++)
+    int y;                      /* 图像行索引 */
+    int bottom_l;               /* 近端左侧参考点 */
+    int bottom_r;               /* 近端右侧参考点 */
+    int16 xl;                   /* 当前行补线后左边界 */
+    int16 xr;                   /* 当前行补线后右边界 */
+    static float top_x;         /* 远端交点横坐标缓存，跨帧平滑复用 */
+    static float SlopeR;        /* 右侧补线斜率缓存 */
+    static float SlopeL;        /* 左侧补线斜率缓存 */
+
+    /* 线性回归中间量：用于倾斜进入时估计边界斜率 */
+    float x1;
+    float x2;
+    float x3;
+    float x4;
+    float y1;
+    float x_avg;
+    float y_avg;
+    float denom;
+
+    for(y = forward_near; y <= watch.watch_lost; y++)
     {
-        int16 xl,xr;
-//        xl = lineinfo[y].left;
-//        xr = lineinfo[y].right;
-        if(watch.cross_flag==3)
-        {
-            if(watch.cross_AngleL<110&&watch.cross_AngleR<110&&watch.cross_AngleR_x-watch.cross_AngleL_x>15)
-            {
-                if(lineinfo[0].left_lost)bottom_l=20;
-                else bottom_l=lineinfo[0].left;
-                if(lineinfo[0].right_lost)bottom_r=168;
-                else bottom_r=lineinfo[0].right;
-                slopeCL=(float)(watch.cross_AngleL_x-bottom_l)/watch.cross_AngleL;
-                xl=slopeCL*y+bottom_l;
-                slopeCR=(float)(bottom_r-watch.cross_AngleR_x)/watch.cross_AngleR;
-                xr=bottom_r-slopeCR*y;
-            }
-            else
-            {
-                xl = lineinfo[y].left;
-                xr = lineinfo[y].right;
-            }
+        xl = lineinfo[y].left;
+        xr = lineinfo[y].right;
 
-        }
-        else if(watch.cross_flag==2)
+        if(watch.cross_flag == 3)
         {
-            if(watch.cross_RD_angle>21)
+            if((watch.cross_AngleL < 110) &&
+               (watch.cross_AngleR < 110) &&
+               (watch.cross_AngleR_x - watch.cross_AngleL_x > 15))
             {
-                float x1=lineinfo[watch.cross_RD_angle].right,x2=lineinfo[watch.cross_RD_angle-5].right,x3=lineinfo[watch.cross_RD_angle-10].right,x4=lineinfo[watch.cross_RD_angle-15].right;
-                float y1=watch.cross_RD_angle;
-                float x_avg=(x1+x2+x3+x4)/4;
-                float y_avg=(float)watch.cross_RD_angle-7.5;
-                SlopeR=-(x1*x1+x2*x2+x3*x3+x4*x4-4*x_avg*x_avg)/(y1*x1+(y1-5)*x2+(y1-10)*x3+(y1-15)*x4-4*y_avg*x_avg);//用线性回归计算斜率
-                top_x=lineinfo[0].right-SlopeR*115;
-                xr = lineinfo[0].right-SlopeR*y;
-                SlopeL=(float)(top_x-lineinfo[0].left)/115;
-                xl=top_x-(115-y)*SlopeL;
+                if(lineinfo[0].left_lost)
+                {
+                    bottom_l = 20;
+                }
+                else
+                {
+                    bottom_l = lineinfo[0].left;
+                }
+
+                if(lineinfo[0].right_lost)
+                {
+                    bottom_r = 168;
+                }
+                else
+                {
+                    bottom_r = lineinfo[0].right;
+                }
+
+                slopeCL = (float)(watch.cross_AngleL_x - bottom_l) / watch.cross_AngleL;
+                xl = (int16)(slopeCL * y + bottom_l);   /* 左边界按角点向近端线性外推 */
+
+                slopeCR = (float)(bottom_r - watch.cross_AngleR_x) / watch.cross_AngleR;
+                xr = (int16)(bottom_r - slopeCR * y);   /* 右边界按角点向近端线性外推 */
+            }
+        }
+        else if(watch.cross_flag == 2)
+        {
+            if(watch.cross_RD_angle > 21)
+            {
+                x1 = lineinfo[watch.cross_RD_angle].right;
+                x2 = lineinfo[watch.cross_RD_angle - 5].right;
+                x3 = lineinfo[watch.cross_RD_angle - 10].right;
+                x4 = lineinfo[watch.cross_RD_angle - 15].right;
+                y1 = watch.cross_RD_angle;
+
+                x_avg = (x1 + x2 + x3 + x4) * 0.25f;
+                y_avg = (float)watch.cross_RD_angle - 7.5f;
+
+                denom = y1 * x1 + (y1 - 5.0f) * x2 + (y1 - 10.0f) * x3 + (y1 - 15.0f) * x4 - 4.0f * y_avg * x_avg;
+                if(denom != 0.0f)
+                {
+                    SlopeR = -(x1 * x1 + x2 * x2 + x3 * x3 + x4 * x4 - 4.0f * x_avg * x_avg) / denom;
+                }
+
+                top_x = lineinfo[0].right - SlopeR * 115.0f;
+                xr = (int16)(lineinfo[0].right - SlopeR * y);
+
+                SlopeL = (top_x - lineinfo[0].left) / 115.0f;
+                xl = (int16)(top_x - (115 - y) * SlopeL);
             }
             else
             {
-                xr=top_x+SlopeR*(115-y);
-                xl=top_x-(115-y)*SlopeL;
+                xr = (int16)(top_x + SlopeR * (115 - y));
+                xl = (int16)(top_x - (115 - y) * SlopeL);
             }
         }
-        else if(watch.cross_flag==1)
+        else if(watch.cross_flag == 1)
         {
-            if(watch.cross_LD_angle>21)
+            if(watch.cross_LD_angle > 21)
             {
-                float x1=lineinfo[watch.cross_LD_angle].left,x2=lineinfo[watch.cross_LD_angle-5].left,x3=lineinfo[watch.cross_LD_angle-10].left,x4=lineinfo[watch.cross_LD_angle-15].left;
-                float y1=watch.cross_LD_angle;
-                float x_avg=(x1+x2+x3+x4)/4;
-                float y_avg=(float)watch.cross_LD_angle-7.5;
-                SlopeL=(x1*x1+x2*x2+x3*x3+x4*x4-4*x_avg*x_avg)/(y1*x1+(y1-5)*x2+(y1-10)*x3+(y1-15)*x4-4*y_avg*x_avg);//用线性回归计算斜率
-                top_x=lineinfo[0].left+SlopeL*115;
-                xl = lineinfo[0].left+SlopeL*y;
-                SlopeR=(float)(lineinfo[0].right-top_x)/115;
-                xr=top_x+(115-y)*SlopeR;
+                x1 = lineinfo[watch.cross_LD_angle].left;
+                x2 = lineinfo[watch.cross_LD_angle - 5].left;
+                x3 = lineinfo[watch.cross_LD_angle - 10].left;
+                x4 = lineinfo[watch.cross_LD_angle - 15].left;
+                y1 = watch.cross_LD_angle;
+
+                x_avg = (x1 + x2 + x3 + x4) * 0.25f;
+                y_avg = (float)watch.cross_LD_angle - 7.5f;
+
+                denom = y1 * x1 + (y1 - 5.0f) * x2 + (y1 - 10.0f) * x3 + (y1 - 15.0f) * x4 - 4.0f * y_avg * x_avg;
+                if(denom != 0.0f)
+                {
+                    SlopeL = (x1 * x1 + x2 * x2 + x3 * x3 + x4 * x4 - 4.0f * x_avg * x_avg) / denom;
+                }
+
+                top_x = lineinfo[0].left + SlopeL * 115.0f;
+                xl = (int16)(lineinfo[0].left + SlopeL * y);
+
+                SlopeR = (lineinfo[0].right - top_x) / 115.0f;
+                xr = (int16)(top_x + (115 - y) * SlopeR);
             }
             else
             {
-                xr=top_x+SlopeR*(115-y);
-                xl=top_x-(115-y)*SlopeL;
+                xr = (int16)(top_x + SlopeR * (115 - y));
+                xl = (int16)(top_x - (115 - y) * SlopeL);
             }
-        }
-        else
-        {
-            xl = lineinfo[y].left;
-            xr = lineinfo[y].right;
-//                    //记录补线后的结果
-//                    lineinfo[y].left_adjust=xl;
-//                    lineinfo[y].right_adjust=xr;
-//                    //对补线后的结果进行逆透视变换
-//                    persp_task(xl,xr,y);
         }
 
-       if(lineinfo[y].left>94)
+        if(lineinfo[y].left > 94)
         {
-            xl=0;
+            xl = 0;                          /* 左线已偏中时强制拉回左边界 */
         }
-        if(lineinfo[y].right<86)
+        if(lineinfo[y].right < 86)
         {
-            xr=187;
+            xr = 187;                        /* 右线已偏中时强制拉回右边界 */
         }
-        //记录补线后的结果
-        lineinfo[y].left_adjust=xl;
-        lineinfo[y].right_adjust=xr;
-        //对补线后的结果进行逆透视变换
-        persp_task(xl,xr,y);
-    }*/
+
+        lineinfo[y].left_adjust = xl;        /* 记录补线结果供显示与控制复用 */
+        lineinfo[y].right_adjust = xr;
+        persp_task(xl, xr, y);               /* 补线后执行逆透视映射 */
+    }
 }
 void left_garage_linefix()
 {/*
@@ -538,4 +581,5 @@ void black_obstacle_linefix()
             persp_task(xl,xr,y);
     }
 }
+
 

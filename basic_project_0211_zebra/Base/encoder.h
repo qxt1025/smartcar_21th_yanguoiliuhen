@@ -4,7 +4,7 @@
  *  Created on: 2023Äê2ÔÂ10ÈÕ
  *      Author: Admin
  */
-
+#include "zf_common_headfile.h"
 #ifndef CODE_BASE_ENCODER_H_
 #define CODE_BASE_ENCODER_H_
 #include "base.h"
@@ -18,6 +18,7 @@ typedef struct
 }encoder_STRUCT;
 extern encoder_STRUCT encoder;
 void encoder_init();
+void encoder_quad_force_recover(void);
 float encoder_get_speed_Left();
 float encoder_get_speed_Right();
 float moving_average_filtre_right_speed(float xn);

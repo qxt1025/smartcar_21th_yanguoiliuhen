@@ -75,50 +75,60 @@ int line_findnext(struct lineinfo_s *lineinfo, uint8 *inputimg, struct lineinfo_
 }
 
 /*
- * 存储所有黑白跳变沿位置到数组edge_store中
+ * 存储所有黑白跳变沿位置到数组 edge_store 中
+ * C51 优化版
  */
 uint8 get_orign_edges(uint8 *inputimg, uint8 *edge_store)
 {
-#if _EDGE_STORE_SIZE % 2 != 0
+#if (_EDGE_STORE_SIZE % 2) != 0
 #error "_EDGE_STORE_SIZE must be even!"
 #endif
-    uint8 edge_store_idx;
+
+    uint8 edge_store_idx = 0;
     uint8 px;
+    uint8 thr;
+    uint8 prev;
+    uint8 cur;
+    uint8 last_px;
 
-    edge_store_idx = 0;
+    thr = watch.threshold;
+    last_px = (uint8)(LINE_WIDTH - 1);
 
-    // 数组第0位大于阈值（图像最左端为白）则认为此处为跳变沿
-    if (inputimg[0] > watch.threshold)
-    {
-        edge_store[edge_store_idx] = 0;
-        edge_store_idx++;
-    }
-
-    for (px = 1; px < LINE_WIDTH; px++)
-    {
-        // 分布在阈值两侧认为是跳边沿
-        if (!((inputimg[px - 1] > watch.threshold && inputimg[px] < watch.threshold) ||
-              (inputimg[px - 1] < watch.threshold && inputimg[px] > watch.threshold)))
-        {
-            continue;
-        }
-
-        if (edge_store_idx >= _EDGE_STORE_SIZE)
-        {
-            break;
-        }
-
-        edge_store[edge_store_idx] = px; // 将跳变沿存入数组
-        edge_store_idx++;
-    }
-
-    // 数组最后一位大于阈值（图像最右端为白）则认为此处为跳变沿
-    if (inputimg[LINE_WIDTH - 1] > watch.threshold)
+    /* 左端白，记 0 */
+    if (inputimg[0] > thr)
     {
         if (edge_store_idx < _EDGE_STORE_SIZE)
         {
-            edge_store[edge_store_idx] = LINE_WIDTH - 1;
-            edge_store_idx++;
+            edge_store[edge_store_idx++] = 0;
+        }
+    }
+
+    prev = inputimg[0];
+
+    for (px = 1; px < LINE_WIDTH; px++)
+    {
+        cur = inputimg[px];
+
+        /* 两点严格分布在阈值两侧，等于阈值不算 */
+        if ((prev != thr) && (cur != thr) && ((prev < thr) != (cur < thr)))
+        {
+            if (edge_store_idx >= _EDGE_STORE_SIZE)
+            {
+                break;
+            }
+
+            edge_store[edge_store_idx++] = px;
+        }
+
+        prev = cur;
+    }
+
+    /* 右端白，记最后一点 */
+    if (inputimg[last_px] > thr)
+    {
+        if (edge_store_idx < _EDGE_STORE_SIZE)
+        {
+            edge_store[edge_store_idx++] = last_px;
         }
     }
 

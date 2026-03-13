@@ -146,9 +146,10 @@ void GUI_Process(uint16 fps)
     if(g_display_mode == GUI_MODE_IMAGE_AND_MAIN_INFO)
     {
         ips200_show_int32(30, 140, (int32)fps, 4);
-        ips200_show_int32(40, 155, (int32)mycar.original_err, 4);
+        ips200_show_int32(40, 155, (int32)distance_integral.integeral_data, 4);
         ips200_show_int32(40, 170, (int32)mycar.steer_pwm, 4);
-        ips200_show_int32(40, 185, (int32)watch.cross_state, 4);
+        ips200_show_int32(40, 185, (int32)watch.cross_flag, 4);
+        ips200_show_int32(40, 200, (int32)beep_time, 4);
         /*ips200_show_int32(80, 220, (int32)watch.cross, 4);
         ips200_show_int32(80, 240, (int32)watch.black_obstacle_flag, 4);
         ips200_show_int32(80, 260, (int32)watch.right_black, 4);
@@ -156,9 +157,10 @@ void GUI_Process(uint16 fps)
         ips200_show_int32(160, 140, (int32)watch.InLoopAngleL, 4);
         ips200_show_int32(160, 160, (int32)watch.InLoopAngleR, 4);*/
 
-        ips200_show_string(0, 155, "o_err");
+        ips200_show_string(0, 155, "integ");
         ips200_show_string(0, 170, "s_pwm");
-        ips200_show_string(0, 185, "cro_st");
+        ips200_show_string(0, 185, "cross");
+        ips200_show_string(0, 200, "beep");
     }
 }
 

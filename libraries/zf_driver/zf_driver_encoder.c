@@ -232,7 +232,7 @@ static void pwm_encoder_dir_init(encoder_index_enum encoder_n, encoder_channel_e
 // 参数说明     phaseA      通道A以及引脚
 // 参数说明     phaseB      通道B以及引脚
 // 返回参数     void
-// 使用示例             encoder_init_dir(PWMA_ENCODER, PWMA_ENCODER_CH1P_P60, PWMA_ENCODER_CH2P_P62)
+// 使用示例             encoder_quad_init(PWMA_ENCODER, PWMA_ENCODER_CH1P_P60, PWMA_ENCODER_CH2P_P62)
 //                      // 使用PWMA 做正交解码使用， 通道1脉冲信号引脚P60，通道2脉冲信号引脚P62
 // 备注信息                                
 //-------------------------------------------------------------------------------------------------------------------

@@ -8,8 +8,10 @@
 #ifndef CODE_BASE_BEEP_H_
 #define CODE_BASE_BEEP_H_
 #include "base.h"
-extern uint16 beep_time;
+extern volatile uint16 beep_time;
 extern uint8* music;
+void beep_init();
+void beep_power_on_self_test();
 void beeping();
 void beep(uint16 time);
 void beep2(uint8 yinjie,uint16 time);
