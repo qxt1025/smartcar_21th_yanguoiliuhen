@@ -151,12 +151,12 @@ void enter_task()
 
             //if(setpara.bla_obs_open_flag>=1){
 
-             //zebra_enter();
+             zebra_enter();
             }
             break;
         default:
             out_element();
-            //zebra_out();
+            zebra_out();
             break;
     }
     //zebra_indentification(); //斑马线识别
@@ -308,7 +308,7 @@ void clear_all_flags()
 void line_lost()
 {
 
-    int y = 0;
+    u8 y = 0;
     watch.left_lost = 0;
     watch.right_lost = 0;
     watch.left_near_lost = forward_far;
