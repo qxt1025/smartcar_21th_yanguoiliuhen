@@ -111,7 +111,7 @@ static uint32 now = 0;                                   // 当前时间戳(ms)
 static uint32 elapsed = 0;                               // FPS统计窗口时长(ms)
 static uint32 t0 = 0;                                    // 阶段起始时间(ms)
 static uint32 t1 = 0;                                    // 阶段结束时间(ms)
-
+static uint32 run_cnt = 0;
 /*
  * 功能: 交换摄像头双缓冲，并将DMA重定向到新的写缓冲
  * 参数: 无
@@ -225,13 +225,14 @@ void main(void)
                 watch.threshold=80;//防止冲出赛道失控
             }
             scan_line();
-            line_lost();
+            
             
             t1 = get_ms_ticks();                           // 记录预处理结束时间
             proc_last_ms = t1 - t0;                        // 计算预处理耗时
 
             /******后处理（元素识别）部分耗时计算*******/
             t0 = get_ms_ticks();                           // 记录元素处理开始时间
+            line_lost();
             Element_recognition();                         // 元素识别
             linefix();                                     // 补线处理
             original_err_calculation();                    // 计算原始偏差
@@ -291,6 +292,12 @@ void main(void)
 static void pit_handler(void)
 {
     g_ms_ticks++;                                           // 累加全局毫秒计数
+    run_cnt++;
+    if(run_cnt>=1000)
+    {
+        run_cnt = 0;
+        mycar.RUNTIME++;
+    }
     //timer4_Call_Back();
 }
 
@@ -303,7 +310,10 @@ static void pit_handler(void)
 static void tim1_ctrl_handler(void)
 {
     g_tim1_1ms_flag = 1U;                                   // 置位1ms周期任务标志
-    set_pwm(-1500+mycar.steer_pwm,-1500-mycar.steer_pwm);
+    if(watch.zebra_flag == 2 || mycar.car_stop == 1)
+        set_pwm(0,0);
+    else
+        set_pwm(-1500+mycar.steer_pwm,-1500-mycar.steer_pwm);
     timer1_Call_Back();
        
 }
